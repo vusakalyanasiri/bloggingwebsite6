@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WriteWave - Blogging Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <h1>WriteWave</h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#create">Create Blog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Home -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline">WELCOME TO WRITEWAVE</p>
+
+            <h2>Ideas That Make<br>Waves</h2>
+
+            <p>
+                Discover interesting stories, share your ideas,
+                and inspire people through the power of blogging.
+            </p>
+
+            <button onclick="goToBlogs()">
+                Explore Blogs
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Blogs -->
+    <section id="blogs">
+
+        <p class="section-tag">EXPLORE</p>
+
+        <h2>Featured Blogs</h2>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search blogs..."
+                onkeyup="searchBlogs()"
+            >
+        </div>
+
+
+        <div id="blogContainer" class="blog-container">
+
+            <article class="blog-card">
+
+                <div class="blog-category">
+                    TECHNOLOGY
+                </div>
+
+                <h3>The Future of Technology</h3>
+
+                <p>
+                    Technology is changing our lives every day.
+                    Learn how modern technologies are shaping our future.
+                </p>
+
+                <div class="blog-bottom">
+                    <button onclick="readBlog('The Future of Technology')">
+                        Read More
+                    </button>
+
+                    <button class="like-btn" onclick="likeBlog(this)">
+                        ♡ <span>0</span>
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="blog-card">
+
+                <div class="blog-category">
+                    TRAVEL
+                </div>
+
+                <h3>Why We Should Travel</h3>
+
+                <p>
+                    Travelling gives us new experiences, cultures
+                    and memories that stay with us forever.
+                </p>
+
+                <div class="blog-bottom">
+                    <button onclick="readBlog('Why We Should Travel')">
+                        Read More
+                    </button>
+
+                    <button class="like-btn" onclick="likeBlog(this)">
+                        ♡ <span>0</span>
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="blog-card">
+
+                <div class="blog-category">
+                    LIFESTYLE
+                </div>
+
+                <h3>Building Better Habits</h3>
+
+                <p>
+                    Small positive habits can improve our daily life
+                    and help us achieve our long-term goals.
+                </p>
+
+                <div class="blog-bottom">
+                    <button onclick="readBlog('Building Better Habits')">
+                        Read More
+                    </button>
+
+                    <button class="like-btn" onclick="likeBlog(this)">
+                        ♡ <span>0</span>
+                    </button>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Create Blog -->
+    <section id="create" class="create-section">
+
+        <p class="section-tag">CREATE</p>
+
+        <h2>Share Your Story</h2>
+
+        <p class="section-description">
+            Have an idea? Write it and share it with the world.
+        </p>
+
+        <form id="blogForm">
+
+            <input
+                type="text"
+                id="blogTitle"
+                placeholder="Blog Title"
+                required
+            >
+
+            <input
+                type="text"
+                id="authorName"
+                placeholder="Author Name"
+                required
+            >
+
+            <textarea
+                id="blogContent"
+                placeholder="Write your blog here..."
+                required
+            ></textarea>
+
+            <button type="submit">
+                Publish Blog
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <p class="section-tag">ABOUT US</p>
+
+        <h2>About WriteWave</h2>
+
+        <p class="about-text">
+            WriteWave is a simple and modern blogging platform
+            created for people who love reading, writing and
+            sharing ideas. It is developed using HTML, CSS
+            and JavaScript.
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+
+        <p class="section-tag">GET IN TOUCH</p>
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="contactName"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="contactEmail"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>WriteWave</h3>
+
+        <p>
+            Share your ideas. Inspire the world.
+        </p>
+
+        <p class="copyright">
+            © 2026 WriteWave. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
